@@ -71,11 +71,22 @@
 				{"metric": "Tqueue", "aggr": "none" }
 			]
 		},
-		"r07_cov15": {
+		"r09_cov15": {
 			"outfile": "analyses/r09_cov15.csv",
 			"scenarios": {
 				"fixed": { "rho": "0.9", "cv": "1.5" },
 				"range": []
+			},
+			"metrics": [
+				{"metric": "Tresp", "aggr": "none" },
+				{"metric": "Tqueue", "aggr": "none" }
+			]
+		},
+		"test_r07": {
+			"outfile": "analyses/test_r07.csv",
+			"scenarios": {
+				"fixed": {},
+				"range": ["rho","cv"]
 			},
 			"metrics": [
 				{"metric": "Tresp", "aggr": "none" },
