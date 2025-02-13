@@ -1,0 +1,12 @@
+molto spesso quando modello dei server vado a mettere una linea di ritardo, cioè servitori che aggiungono ritardi
+-> simulazione di una rete geografica, per evitare di aggiungere modelli di congestione difficili da catturare in modo verosimile
+-> aggiungo un delay center, un servitore senza coda, le cose entrano e escono dopo un certo tempo
+
+sink comune per raccogliere dati
+
+topologia con numero variabile di nodi(in questo caso non abbiamo load balancer che distribuiscono il carico, ma abbiamo inserito più source nodes)
+
+assumiamo che questi sistemi non abbiano un tempo di servizio esponenziale, ma log normal (distribuzione molto usata)
+
+andiamo a vedere come varia rispetto al coefficiente di variazione il tempo di risposta -> equazione di ...
+
