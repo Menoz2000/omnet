@@ -1,0 +1,24 @@
+{
+    "scenario_schema": {
+        "fl": {"pattern": "**.fl", "type": "real"}
+    },
+    "metrics": {
+        "ResponseTime": {
+            "module": "**.sink", 
+            "scalar_name": "lifeTime:mean" ,
+            "aggr": ["none"]}
+    },
+    "analyses": {
+        "Hist_exam_first": {
+            "outfile": "results/exam_third.data",
+            "scenarios": {
+                "fixed": {},
+                "range": ["fl"]
+            },
+            "metrics": [
+				{"metric": "ResponseTime", "aggr": "none" }
+            ]
+        }
+    }
+}
+
