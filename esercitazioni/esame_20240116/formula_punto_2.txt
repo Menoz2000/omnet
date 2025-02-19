@@ -1,0 +1,9 @@
+Trl = Trc
+
+Trl = 1 / (mu - f * lambda)
+Trc = (1 / mu) + 0.1
+
+risolvi l'equazione cercando f
+con
+mu = 10
+lambda = 10
