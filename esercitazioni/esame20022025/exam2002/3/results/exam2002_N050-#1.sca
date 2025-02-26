@@ -1,0 +1,1775 @@
+version 3
+run exam2002_N050-1-20250220-16:04:34-36385
+attr configname exam2002_N050
+attr datetime 20250220-16:04:34
+attr datetimef 20250220-160434
+attr experiment exam2002_N050
+attr inifile exam2002.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network exam2002
+attr processid 36385
+attr repetition 1
+attr replication #1
+attr resultdir results
+attr runnumber 1
+attr seedset 1
+config cmdenv-performance-display false
+config cmdenv-status-frequency 60s
+config extends exam2002Base
+config **.N 50
+config description "Global scenario"
+config **.sink.lifeTime.result-recording-modes +histogram
+config ned-path .;../queueinglib
+config network exam2002
+config cmdenv-config-name exam2002Base
+config qtenv-default-config exam2002Base
+config repeat 5
+config sim-time-limit 10000s
+config **.vector-recording false
+
+par exam2002.src typename "\"org.omnetpp.queueing.Source\""
+par exam2002.src numJobs -1
+par exam2002.src interArrivalTime 1s*exponential(1/lambda)
+attr unit s
+par exam2002.src jobName "\"job\""
+par exam2002.src jobType 0
+par exam2002.src jobPriority 0
+par exam2002.src startTime 0.00539606s
+attr unit s
+par exam2002.src stopTime -1s
+attr unit s
+scalar exam2002.src created:last 999879
+attr interpolationmode none
+attr recordingmode last
+attr title "the number of jobs created, last"
+par exam2002.router typename "\"org.omnetpp.queueing.Router\""
+par exam2002.router routingAlgorithm "\"random\""
+attr enum random,roundRobin,shortestQueue,minDelay
+par exam2002.router randomGateIndex "intuniform(0, sizeof(out)-1)"
+par exam2002.srv[0] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[0] capacity -1
+par exam2002.srv[0] fifo true
+par exam2002.srv[0] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[0] busy:timeavg 0.2011471022184
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[0] queueingTime:mean 0.099429181084723
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[0] queueingTime:max 10.070229374951
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[0] queueLength:timeavg 0.20037962864004
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[0] queueLength:max 21
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[0] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[1] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[1] capacity -1
+par exam2002.srv[1] fifo true
+par exam2002.srv[1] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[1] busy:timeavg 0.19100632413155
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[1] queueingTime:mean 0.092874841382075
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[1] queueingTime:max 9.688977689576
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[1] queueLength:timeavg 0.18491380919171
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[1] queueLength:max 31
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[1] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[2] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[2] capacity -1
+par exam2002.srv[2] fifo true
+par exam2002.srv[2] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[2] busy:timeavg 0.20367902751966
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[2] queueingTime:mean 0.11787423360555
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[2] queueingTime:max 19.03399382035
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[2] queueLength:timeavg 0.23645571261273
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[2] queueLength:max 37
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[2] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[3] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[3] capacity -1
+par exam2002.srv[3] fifo true
+par exam2002.srv[3] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[3] busy:timeavg 0.20842388277281
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[3] queueingTime:mean 0.18566552300264
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[3] queueingTime:max 27.656639239303
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[3] queueLength:timeavg 0.3724821722479
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[3] queueLength:max 44
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[3] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[4] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[4] capacity -1
+par exam2002.srv[4] fifo true
+par exam2002.srv[4] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[4] busy:timeavg 0.20143219482638
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[4] queueingTime:mean 0.099689571179207
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[4] queueingTime:max 10.191766903371
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[4] queueLength:timeavg 0.20008693831379
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[4] queueLength:max 23
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[4] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[5] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[5] capacity -1
+par exam2002.srv[5] fifo true
+par exam2002.srv[5] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[5] busy:timeavg 0.19507739902509
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[5] queueingTime:mean 0.080460896524734
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[5] queueingTime:max 6.620190475388
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[5] queueLength:timeavg 0.16104248439425
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[5] queueLength:max 18
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[5] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[6] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[6] capacity -1
+par exam2002.srv[6] fifo true
+par exam2002.srv[6] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[6] busy:timeavg 0.19637001135064
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[6] queueingTime:mean 0.10641632236185
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[6] queueingTime:max 16.739975044384
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[6] queueLength:timeavg 0.21189618108692
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[6] queueLength:max 41
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[6] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[7] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[7] capacity -1
+par exam2002.srv[7] fifo true
+par exam2002.srv[7] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[7] busy:timeavg 0.19888358056633
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[7] queueingTime:mean 0.098233780836471
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[7] queueingTime:max 7.052826240383
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[7] queueLength:timeavg 0.19582904209751
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[7] queueLength:max 18
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[7] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[8] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[8] capacity -1
+par exam2002.srv[8] fifo true
+par exam2002.srv[8] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[8] busy:timeavg 0.19461196334734
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[8] queueingTime:mean 0.10367222178428
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[8] queueingTime:max 11.38793164082
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[8] queueLength:timeavg 0.20800794578799
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[8] queueLength:max 31
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[8] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[9] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[9] capacity -1
+par exam2002.srv[9] fifo true
+par exam2002.srv[9] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[9] busy:timeavg 0.1956552207796
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[9] queueingTime:mean 0.10480828233553
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[9] queueingTime:max 15.793754321278
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[9] queueLength:timeavg 0.20852655853478
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[9] queueLength:max 28
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[9] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[10] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[10] capacity -1
+par exam2002.srv[10] fifo true
+par exam2002.srv[10] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[10] busy:timeavg 0.20318764638581
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[10] queueingTime:mean 0.18202856312936
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[10] queueingTime:max 20.343127430904
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[10] queueLength:timeavg 0.36676935184935
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[10] queueLength:max 52
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[10] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[11] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[11] capacity -1
+par exam2002.srv[11] fifo true
+par exam2002.srv[11] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[11] busy:timeavg 0.19627602740405
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[11] queueingTime:mean 0.096286715083873
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[11] queueingTime:max 11.621189775699
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[11] queueLength:timeavg 0.19184165113311
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[11] queueLength:max 17
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[11] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[12] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[12] capacity -1
+par exam2002.srv[12] fifo true
+par exam2002.srv[12] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[12] busy:timeavg 0.20808470459257
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[12] queueingTime:mean 0.14878216005808
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[12] queueingTime:max 16.241403945268
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[12] queueLength:timeavg 0.30094167514948
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[12] queueLength:max 34
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[12] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[13] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[13] capacity -1
+par exam2002.srv[13] fifo true
+par exam2002.srv[13] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[13] busy:timeavg 0.19723541939694
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[13] queueingTime:mean 0.1024965295392
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[13] queueingTime:max 11.285752275952
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[13] queueLength:timeavg 0.20289188022285
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[13] queueLength:max 28
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[13] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[14] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[14] capacity -1
+par exam2002.srv[14] fifo true
+par exam2002.srv[14] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[14] busy:timeavg 0.19149683460192
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[14] queueingTime:mean 0.077142810504058
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[14] queueingTime:max 8.685593580392
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[14] queueLength:timeavg 0.15553533453828
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[14] queueLength:max 18
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[14] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[15] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[15] capacity -1
+par exam2002.srv[15] fifo true
+par exam2002.srv[15] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[15] busy:timeavg 0.19607464526468
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[15] queueingTime:mean 0.093086263219281
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[15] queueingTime:max 15.386894711494
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[15] queueLength:timeavg 0.18579087275936
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[15] queueLength:max 29
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[15] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[16] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[16] capacity -1
+par exam2002.srv[16] fifo true
+par exam2002.srv[16] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[16] busy:timeavg 0.20104808801098
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[16] queueingTime:mean 0.11988870684882
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[16] queueingTime:max 16.426854908276
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[16] queueLength:timeavg 0.23951365854257
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[16] queueLength:max 25
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[16] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[17] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[17] capacity -1
+par exam2002.srv[17] fifo true
+par exam2002.srv[17] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[17] busy:timeavg 0.20246715968168
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[17] queueingTime:mean 0.13736504840572
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[17] queueingTime:max 18.680773872404
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[17] queueLength:timeavg 0.27059644391633
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[17] queueLength:max 42
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[17] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[18] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[18] capacity -1
+par exam2002.srv[18] fifo true
+par exam2002.srv[18] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[18] busy:timeavg 0.19651347080223
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[18] queueingTime:mean 0.092409105934722
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[18] queueingTime:max 8.376276594209
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[18] queueLength:timeavg 0.18276672971769
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[18] queueLength:max 20
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[18] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[19] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[19] capacity -1
+par exam2002.srv[19] fifo true
+par exam2002.srv[19] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[19] busy:timeavg 0.2043762517579
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[19] queueingTime:mean 0.1155409369765
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[19] queueingTime:max 10.744569698093
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[19] queueLength:timeavg 0.23228349969755
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[19] queueLength:max 25
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[19] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[20] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[20] capacity -1
+par exam2002.srv[20] fifo true
+par exam2002.srv[20] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[20] busy:timeavg 0.19691789204655
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[20] queueingTime:mean 0.091291953434581
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[20] queueingTime:max 7.447594812527
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[20] queueLength:timeavg 0.18219135146939
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[20] queueLength:max 18
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[20] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[21] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[21] capacity -1
+par exam2002.srv[21] fifo true
+par exam2002.srv[21] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[21] busy:timeavg 0.20021456375039
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[21] queueingTime:mean 0.13162845202093
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[21] queueingTime:max 19.782372153872
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[21] queueLength:timeavg 0.26386239492115
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[21] queueLength:max 34
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[21] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[22] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[22] capacity -1
+par exam2002.srv[22] fifo true
+par exam2002.srv[22] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[22] busy:timeavg 0.21357402554884
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[22] queueingTime:mean 0.55815726819674
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[22] queueingTime:max 68.397827267646
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[22] queueLength:timeavg 1.1256357627724
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[22] queueLength:max 126
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[22] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[23] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[23] capacity -1
+par exam2002.srv[23] fifo true
+par exam2002.srv[23] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[23] busy:timeavg 0.19298839426472
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[23] queueingTime:mean 0.093765986409678
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[23] queueingTime:max 13.507360224835
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[23] queueLength:timeavg 0.18737257064246
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[23] queueLength:max 22
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[23] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[24] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[24] capacity -1
+par exam2002.srv[24] fifo true
+par exam2002.srv[24] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[24] busy:timeavg 0.19054703929395
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[24] queueingTime:mean 0.087199407338806
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[24] queueingTime:max 8.010520807868
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[24] queueLength:timeavg 0.17270714617524
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[24] queueLength:max 19
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[24] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[25] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[25] capacity -1
+par exam2002.srv[25] fifo true
+par exam2002.srv[25] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[25] busy:timeavg 0.20111291502663
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[25] queueingTime:mean 0.11232604349695
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[25] queueingTime:max 13.701009621201
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[25] queueLength:timeavg 0.22518001939834
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[25] queueLength:max 21
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[25] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[26] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[26] capacity -1
+par exam2002.srv[26] fifo true
+par exam2002.srv[26] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[26] busy:timeavg 0.19574529292197
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[26] queueingTime:mean 0.11290543583752
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[26] queueingTime:max 14.095429493506
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[26] queueLength:timeavg 0.22441683790101
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[26] queueLength:max 33
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[26] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[27] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[27] capacity -1
+par exam2002.srv[27] fifo true
+par exam2002.srv[27] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[27] busy:timeavg 0.1995380187739
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[27] queueingTime:mean 0.099520683468169
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[27] queueingTime:max 7.351704996865
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[27] queueLength:timeavg 0.19928021657666
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[27] queueLength:max 21
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[27] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[28] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[28] capacity -1
+par exam2002.srv[28] fifo true
+par exam2002.srv[28] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[28] busy:timeavg 0.20045619436621
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[28] queueingTime:mean 0.16123680973969
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[28] queueingTime:max 20.859312089171
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[28] queueLength:timeavg 0.32144170389705
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[28] queueLength:max 42
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[28] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[29] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[29] capacity -1
+par exam2002.srv[29] fifo true
+par exam2002.srv[29] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[29] busy:timeavg 0.20189611980669
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[29] queueingTime:mean 0.11071288658364
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[29] queueingTime:max 9.582505172884
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[29] queueLength:timeavg 0.22266575749701
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[29] queueLength:max 21
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[29] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[30] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[30] capacity -1
+par exam2002.srv[30] fifo true
+par exam2002.srv[30] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[30] busy:timeavg 0.20126748031261
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[30] queueingTime:mean 0.10482599829736
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[30] queueingTime:max 8.981123068752
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[30] queueLength:timeavg 0.20941089679865
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[30] queueLength:max 21
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[30] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[31] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[31] capacity -1
+par exam2002.srv[31] fifo true
+par exam2002.srv[31] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[31] busy:timeavg 0.20237000498298
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[31] queueingTime:mean 0.088549042884402
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[31] queueingTime:max 5.252582521444
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[31] queueLength:timeavg 0.17524741077252
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[31] queueLength:max 17
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[31] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[32] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[32] capacity -1
+par exam2002.srv[32] fifo true
+par exam2002.srv[32] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[32] busy:timeavg 0.20583837236843
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[32] queueingTime:mean 0.12444523321462
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[32] queueingTime:max 11.858122740503
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[32] queueLength:timeavg 0.25065758874088
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[32] queueLength:max 27
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[32] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[33] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[33] capacity -1
+par exam2002.srv[33] fifo true
+par exam2002.srv[33] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[33] busy:timeavg 0.20043986612453
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[33] queueingTime:mean 0.10471115412894
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[33] queueingTime:max 11.857416265026
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[33] queueLength:timeavg 0.20908723256467
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[33] queueLength:max 24
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[33] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[34] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[34] capacity -1
+par exam2002.srv[34] fifo true
+par exam2002.srv[34] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[34] busy:timeavg 0.19627069095873
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[34] queueingTime:mean 0.1138050110384
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[34] queueingTime:max 17.976812971827
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[34] queueLength:timeavg 0.22767830508342
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[34] queueLength:max 45
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[34] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[35] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[35] capacity -1
+par exam2002.srv[35] fifo true
+par exam2002.srv[35] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[35] busy:timeavg 0.19964258417191
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[35] queueingTime:mean 0.10225287498997
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[35] queueingTime:max 14.032060844543
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[35] queueLength:timeavg 0.2060088672423
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[35] queueLength:max 26
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[35] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[36] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[36] capacity -1
+par exam2002.srv[36] fifo true
+par exam2002.srv[36] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[36] busy:timeavg 0.20146183020312
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[36] queueingTime:mean 0.10859913825913
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[36] queueingTime:max 11.649826995136
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[36] queueLength:timeavg 0.21739454868302
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[36] queueLength:max 23
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[36] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[37] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[37] capacity -1
+par exam2002.srv[37] fifo true
+par exam2002.srv[37] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[37] busy:timeavg 0.19706371066084
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[37] queueingTime:mean 0.16300303646852
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[37] queueingTime:max 19.987708805432
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[37] queueLength:timeavg 0.32432714166141
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[37] queueLength:max 42
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[37] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[38] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[38] capacity -1
+par exam2002.srv[38] fifo true
+par exam2002.srv[38] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[38] busy:timeavg 0.20294285986628
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[38] queueingTime:mean 0.11836661514909
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[38] queueingTime:max 9.312809167332
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[38] queueLength:timeavg 0.23857974949451
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[38] queueLength:max 25
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[38] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[39] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[39] capacity -1
+par exam2002.srv[39] fifo true
+par exam2002.srv[39] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[39] busy:timeavg 0.19883869011828
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[39] queueingTime:mean 0.09060727924371
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[39] queueingTime:max 6.97897120594
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[39] queueLength:timeavg 0.18264615349947
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[39] queueLength:max 16
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[39] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[40] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[40] capacity -1
+par exam2002.srv[40] fifo true
+par exam2002.srv[40] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[40] busy:timeavg 0.19573457107942
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[40] queueingTime:mean 0.08292911852727
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[40] queueingTime:max 7.522958720044
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[40] queueLength:timeavg 0.16565091425822
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[40] queueLength:max 19
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[40] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[41] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[41] capacity -1
+par exam2002.srv[41] fifo true
+par exam2002.srv[41] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[41] busy:timeavg 0.20011813170798
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[41] queueingTime:mean 0.11890694997571
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[41] queueingTime:max 11.928740881297
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[41] queueLength:timeavg 0.23648214211169
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[41] queueLength:max 29
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[41] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[42] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[42] capacity -1
+par exam2002.srv[42] fifo true
+par exam2002.srv[42] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[42] busy:timeavg 0.20041915527477
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[42] queueingTime:mean 0.13618493100617
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[42] queueingTime:max 16.644777425605
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[42] queueLength:timeavg 0.27283289077776
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[42] queueLength:max 49
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[42] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[43] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[43] capacity -1
+par exam2002.srv[43] fifo true
+par exam2002.srv[43] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[43] busy:timeavg 0.19592433947185
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[43] queueingTime:mean 0.091899064583517
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[43] queueingTime:max 7.849030170959
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[43] queueLength:timeavg 0.18464974873865
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[43] queueLength:max 21
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[43] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[44] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[44] capacity -1
+par exam2002.srv[44] fifo true
+par exam2002.srv[44] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[44] busy:timeavg 0.20261955175678
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[44] queueingTime:mean 0.13146744342501
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[44] queueingTime:max 15.645699686583
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[44] queueLength:timeavg 0.26073938054481
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[44] queueLength:max 39
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[44] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[45] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[45] capacity -1
+par exam2002.srv[45] fifo true
+par exam2002.srv[45] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[45] busy:timeavg 0.20316650970146
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[45] queueingTime:mean 0.13449186948085
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[45] queueingTime:max 13.196815842665
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[45] queueLength:timeavg 0.27063798895631
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[45] queueLength:max 30
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[45] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[46] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[46] capacity -1
+par exam2002.srv[46] fifo true
+par exam2002.srv[46] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[46] busy:timeavg 0.20041615968512
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[46] queueingTime:mean 0.11307071708331
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[46] queueingTime:max 13.366256969971
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[46] queueLength:timeavg 0.22553085229437
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[46] queueLength:max 30
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[46] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[47] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[47] capacity -1
+par exam2002.srv[47] fifo true
+par exam2002.srv[47] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[47] busy:timeavg 0.20290010810721
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[47] queueingTime:mean 0.129280115328
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[47] queueingTime:max 23.429587965718
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[47] queueLength:timeavg 0.25980131976315
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[47] queueLength:max 46
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[47] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[48] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[48] capacity -1
+par exam2002.srv[48] fifo true
+par exam2002.srv[48] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[48] busy:timeavg 0.19927191975406
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[48] queueingTime:mean 0.09399021880963
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[48] queueingTime:max 6.193966255157
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[48] queueLength:timeavg 0.18866656621657
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[48] queueLength:max 18
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[48] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.srv[49] typename "\"org.omnetpp.queueing.Queue\""
+par exam2002.srv[49] capacity -1
+par exam2002.srv[49] fifo true
+par exam2002.srv[49] serviceTime "1s*lognormal(log(1/mu1*sqrt(1+cv^2)), sqrt(log(1+cv^2)))"
+attr unit s
+scalar exam2002.srv[49] busy:timeavg 0.19741521758803
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar exam2002.srv[49] queueingTime:mean 0.11239507002248
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar exam2002.srv[49] queueingTime:max 13.929398448658
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar exam2002.srv[49] queueLength:timeavg 0.22213761639242
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar exam2002.srv[49] queueLength:max 27
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar exam2002.srv[49] dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par exam2002.sink typename "\"org.omnetpp.queueing.Sink\""
+par exam2002.sink keepJobs false
+scalar exam2002.sink generation:mean 0
+attr interpolationmode none
+attr recordingmode mean
+attr title "the generation of the arrived jobs, mean"
+scalar exam2002.sink generation:max 0
+attr interpolationmode none
+attr recordingmode max
+attr title "the generation of the arrived jobs, max"
+scalar exam2002.sink delaysVisited:mean 0
+attr interpolationmode none
+attr recordingmode mean
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar exam2002.sink delaysVisited:max 0
+attr interpolationmode none
+attr recordingmode max
+attr title "the total number of delays visited by arrived jobs, max"
+scalar exam2002.sink queuesVisited:mean 0.19878963175881
+attr interpolationmode none
+attr recordingmode mean
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar exam2002.sink queuesVisited:max 1
+attr interpolationmode none
+attr recordingmode max
+attr title "the total number of queues visited by arrived jobs, max"
+scalar exam2002.sink totalServiceTime:mean 0.099813715090552
+attr interpolationmode none
+attr recordingmode mean
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar exam2002.sink totalServiceTime:max 68.840071881569
+attr interpolationmode none
+attr recordingmode max
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar exam2002.sink totalDelayTime:mean 0
+attr interpolationmode none
+attr recordingmode mean
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar exam2002.sink totalDelayTime:max 0
+attr interpolationmode none
+attr recordingmode max
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar exam2002.sink totalQueueingTime:mean 0.12162878012948
+attr interpolationmode none
+attr recordingmode mean
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar exam2002.sink totalQueueingTime:max 68.397827267646
+attr interpolationmode none
+attr recordingmode max
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar exam2002.sink lifeTime:mean 0.22144249522004
+attr interpolationmode none
+attr recordingmode mean
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar exam2002.sink lifeTime:max 69.024820274587
+attr interpolationmode none
+attr recordingmode max
+attr title "lifetime of arrived jobs, max"
+attr unit s
+statistic exam2002.sink lifeTime:histogram
+field count 999861
+field mean 0.22144249522004
+field stddev 0.91416152401172
+field min 2.9467262e-05
+field max 69.024820274587
+field sum 221411.7147132
+field sqrsum 884604.25777959
+attr interpolationmode none
+attr recordingmode histogram
+attr title "lifetime of arrived jobs"
+attr unit s
+bin	-inf	0
+bin	0	944788
+bin	0.8	31919
+bin	1.6	10212
+bin	2.4	4783
+bin	3.2	2599
+bin	4	1472
+bin	4.8	998
+bin	5.6	636
+bin	6.4	474
+bin	7.2	283
+bin	8	215
+bin	8.8	221
+bin	9.6	196
+bin	10.4	164
+bin	11.2	121
+bin	12	91
+bin	12.8	96
+bin	13.6	71
+bin	14.4	59
+bin	15.2	41
+bin	16	53
+bin	16.8	48
+bin	17.6	32
+bin	18.4	34
+bin	19.2	19
+bin	20	24
+bin	20.8	8
+bin	21.6	8
+bin	22.4	6
+bin	23.2	10
+bin	24	4
+bin	24.8	7
+bin	25.6	3
+bin	26.4	5
+bin	27.2	5
+bin	28	8
+bin	28.8	6
+bin	29.6	4
+bin	30.4	3
+bin	31.2	4
+bin	32	7
+bin	32.8	4
+bin	33.6	6
+bin	34.4	5
+bin	35.2	3
+bin	36	2
+bin	36.8	4
+bin	37.6	5
+bin	38.4	3
+bin	39.2	7
+bin	40	5
+bin	40.8	3
+bin	41.6	1
+bin	42.4	2
+bin	43.2	3
+bin	44	4
+bin	44.8	1
+bin	45.6	1
+bin	46.4	5
+bin	47.2	3
+bin	48	0
+bin	48.8	1
+bin	49.6	1
+bin	50.4	4
+bin	51.2	3
+bin	52	3
+bin	52.8	4
+bin	53.6	3
+bin	54.4	4
+bin	55.2	3
+bin	56	0
+bin	56.8	1
+bin	57.6	2
+bin	58.4	4
+bin	59.2	1
+bin	60	2
+bin	60.8	3
+bin	61.6	2
+bin	62.4	1
+bin	63.2	0
+bin	64	4
+bin	64.8	1
+bin	65.6	1
+bin	66.4	2
+bin	67.2	3
+bin	68	3
+bin	68.8	1
+bin	69.6	0
+par exam2002 typename "\"exam2002\""
+par exam2002 N 50
+par exam2002 lambda 100
+par exam2002 mu1 10
+par exam2002 rho 10
+par exam2002 cv 3
+

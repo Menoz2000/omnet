@@ -12,8 +12,8 @@ mu=10
 lam=10
 ts=0.1
 delta=0.1
-def theoretical(x):
-    return x*1.05+0.11
+def theoretical(fl):
+    return fl/(mu -lam * fl) + (1 - fl)*(delta * 1/mu)
     
 
 if __name__ == "__main__":
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     # plot respone time
     fig, ax = plt.subplots()
     ax.set(xlabel='$x$', ylabel='Time [s]')
-    plot_line(ax, 'o--', 'sample.data', 'Response Time', '#x', 'y', 'sigma(y)')
+    plot_line(ax, 'o--', 'results/exam_third.data', 'Response Time', '#fl', 'avgResponseTime', 'sigma(avgResponseTime)')
     pts=[x/10.0 for x in range(1, 10)]
     plot_line(ax, '-', None, 'Theoretical Curve', pts, [theoretical(x) for x in pts])
     plt.legend()

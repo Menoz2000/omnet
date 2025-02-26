@@ -1,0 +1,24 @@
+{
+    "scenario_schema": {
+        
+    },
+    "metrics": {
+        "ResponseTime": {
+            "module": "**.sink", 
+            "scalar_name": "lifeTime:mean" ,
+            "aggr": ["none"]}
+    },
+    "analyses": {
+        "Hist_exam_first": {
+            "outfile": "results/exam2002_first.data",
+            "scenarios": {
+                "fixed": {},
+                "range": []
+            },
+            "metrics": [
+				{"metric": "ResponseTime", "aggr": "none" }
+            ]
+        }
+    }
+}
+
